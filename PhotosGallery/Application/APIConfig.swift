@@ -10,8 +10,8 @@ import Foundation
 
 struct APIConfig {
     
-    private let scheme: String
-    private let host: String
+    let scheme: String
+    let host: String
     
     init(scheme: String, host: String) {
         self.scheme = scheme
