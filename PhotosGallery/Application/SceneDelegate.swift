@@ -19,23 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        var api: API {
-            let apiConfig = APIConfig(scheme: Globals.SCHEME, host: Globals.HOST)
-            let apiFetcher = APIFetcher()
-            return API(apiConfig: apiConfig, apiFetcher: apiFetcher)
-        }
-        let userViewController = UsersViewController()
-        let photosViewController = PhotosViewController()
-
-        let splitViewController = UISplitViewController(style: .doubleColumn)
-        splitViewController.setViewController(userViewController, for: .primary)
-        splitViewController.setViewController(photosViewController, for: .secondary)
-
-        splitViewController.delegate = userViewController
-        splitViewController.delegate = photosViewController
-        
-        window.rootViewController = splitViewController
-        window.makeKeyAndVisible()
+        let appCoordinator = AppCoordinator(window: window)
+        appCoordinator.start()
         self.window = window
     }
 
