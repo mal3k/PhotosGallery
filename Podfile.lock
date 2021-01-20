@@ -1,23 +1,16 @@
 PODS:
-  - MagicalRecord (2.4.0):
-    - MagicalRecord/Core (= 2.4.0)
-  - MagicalRecord/Core (2.4.0)
+  - iProgressHUD (1.1.1)
 
 DEPENDENCIES:
-  - MagicalRecord (from `https://github.com/magicalpanda/MagicalRecord`)
+  - iProgressHUD (~> 1.1.1)
 
-EXTERNAL SOURCES:
-  MagicalRecord:
-    :git: https://github.com/magicalpanda/MagicalRecord
-
-CHECKOUT OPTIONS:
-  MagicalRecord:
-    :commit: 6031f608b79c1d6802007aaed6efd100e11f59ba
-    :git: https://github.com/magicalpanda/MagicalRecord
+SPEC REPOS:
+  trunk:
+    - iProgressHUD
 
 SPEC CHECKSUMS:
-  MagicalRecord: 1f22a766156474d9f46a9b1e1ce59ca9e37830fc
+  iProgressHUD: caa742128253c97f2c2e1ec59e2bbe6cf689df6a
 
-PODFILE CHECKSUM: fffdfbc88bb716a289d8222095ac7fba81036883
+PODFILE CHECKSUM: 9f02afd55bceb803df9ed055997c2d47b57f742e
 
 COCOAPODS: 1.8.3

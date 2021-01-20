@@ -6,7 +6,7 @@ target 'PhotosGallery' do
   use_frameworks!
 
   # Pods for PhotosGallery
-  pod 'MagicalRecord', :git => 'https://github.com/magicalpanda/MagicalRecord'
+  pod 'iProgressHUD', '~> 1.1.1'
 
   target 'PhotosGalleryTests' do
     inherit! :search_paths
