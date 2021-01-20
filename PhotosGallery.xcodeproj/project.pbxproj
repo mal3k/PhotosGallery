@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42DA25C25B853EF00752739 /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA25B25B853EF00752739 /* APIFetcher.swift */; };
+		C42DA26225B857A200752739 /* HTTPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA26125B857A200752739 /* HTTPNetworkError.swift */; };
+		C42DA26A25B85ACE00752739 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA26925B85ACE00752739 /* API.swift */; };
+		C42DA26F25B85BAF00752739 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA26E25B85BAF00752739 /* APIConfig.swift */; };
+		C42DA27425B85C3C00752739 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA27325B85C3C00752739 /* Globals.swift */; };
 		C477E34925B81B37004EB844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477E34825B81B37004EB844 /* AppDelegate.swift */; };
 		C477E34B25B81B37004EB844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477E34A25B81B37004EB844 /* SceneDelegate.swift */; };
 		C477E35325B81B37004EB844 /* PhotosGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C477E35125B81B37004EB844 /* PhotosGallery.xcdatamodeld */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C42DA25B25B853EF00752739 /* APIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
+		C42DA26125B857A200752739 /* HTTPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkError.swift; sourceTree = "<group>"; };
+		C42DA26925B85ACE00752739 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C42DA26E25B85BAF00752739 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		C42DA27325B85C3C00752739 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		C477E34525B81B37004EB844 /* PhotosGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C477E34825B81B37004EB844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C477E34A25B81B37004EB844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42DA26025B8578B00752739 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C42DA25B25B853EF00752739 /* APIFetcher.swift */,
+				C42DA26125B857A200752739 /* HTTPNetworkError.swift */,
+				C42DA26925B85ACE00752739 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C477E33C25B81B37004EB844 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +158,8 @@
 			children = (
 				C477E34A25B81B37004EB844 /* SceneDelegate.swift */,
 				C477E34825B81B37004EB844 /* AppDelegate.swift */,
+				C42DA26E25B85BAF00752739 /* APIConfig.swift */,
+				C42DA27325B85C3C00752739 /* Globals.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -162,6 +184,7 @@
 		C477E38725B81E2D004EB844 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C42DA26025B8578B00752739 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -323,8 +346,13 @@
 				C477E3A625B81F0F004EB844 /* AlbumsViewController.swift in Sources */,
 				C477E3A125B81F01004EB844 /* UsersViewController.swift in Sources */,
 				C477E3AB25B81F19004EB844 /* PhotosViewController.swift in Sources */,
+				C42DA26F25B85BAF00752739 /* APIConfig.swift in Sources */,
+				C42DA27425B85C3C00752739 /* Globals.swift in Sources */,
 				C477E34B25B81B37004EB844 /* SceneDelegate.swift in Sources */,
+				C42DA26225B857A200752739 /* HTTPNetworkError.swift in Sources */,
 				C477E35325B81B37004EB844 /* PhotosGallery.xcdatamodeld in Sources */,
+				C42DA26A25B85ACE00752739 /* API.swift in Sources */,
+				C42DA25C25B853EF00752739 /* APIFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

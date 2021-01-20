@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
+        var api: API {
+            let apiConfig = APIConfig(scheme: Globals.SCHEME, host: Globals.HOST)
+            let apiFetcher = APIFetcher()
+            return API(apiConfig: apiConfig, apiFetcher: apiFetcher)
+        }
         let userViewController = UsersViewController()
         let photosViewController = PhotosViewController()
 
