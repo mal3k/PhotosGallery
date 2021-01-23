@@ -1,16 +1,20 @@
 PODS:
   - iProgressHUD (1.1.1)
+  - URITemplate (3.0.0)
 
 DEPENDENCIES:
   - iProgressHUD (~> 1.1.1)
+  - URITemplate
 
 SPEC REPOS:
   trunk:
     - iProgressHUD
+    - URITemplate
 
 SPEC CHECKSUMS:
   iProgressHUD: caa742128253c97f2c2e1ec59e2bbe6cf689df6a
+  URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: 9f02afd55bceb803df9ed055997c2d47b57f742e
+PODFILE CHECKSUM: 950e49e37c653277630c7b8bff921fbfebebc1db
 
 COCOAPODS: 1.8.3
