@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import URITemplate
 
 class API {
     
@@ -20,7 +20,7 @@ class API {
 }
 
 extension API {
-    func getUsers(completion: @escaping (Result<[UserDTO], HTTPNetworkError>) -> Void) {
+    func getUsers(completion: @escaping (Result<UsersResponse, HTTPNetworkError>) -> Void) {
         var components = URLComponents()
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
@@ -31,6 +31,26 @@ extension API {
             completion(Result.failure(HTTPNetworkError.invalidURL))
             return
         }
+        apiFetcher.request(request: URLRequest(url: url)) { response in
+            completion(response)
+        }
+    }
+    func getAlbums(for user: User, completion: @escaping (Result<AlbumsResponse, HTTPNetworkError>) -> Void) {
+        var components = URLComponents()
+        // /users/{user_id}/albums
+        components.scheme = apiConfig.scheme
+        components.host = apiConfig.host
+        let template = URITemplate(template: Endpoints.albums.rawValue)
+        let path = template.expand(
+            ["user_id": user.id]
+        )
+        components.path = path
+        guard let url = components.url
+        else {
+            completion(Result.failure(HTTPNetworkError.invalidURL))
+            return
+        }
+        
         apiFetcher.request(request: URLRequest(url: url)) { response in
             completion(response)
         }

@@ -14,7 +14,7 @@ class UsersCoordinator: Coordinator {
     private let presentingViewController: UISplitViewController
     private let usersRepository: UsersRepository
     private var rootViewController: UINavigationController?
-    
+    private var viewController: UIViewController?
     init(presentingViewController: UISplitViewController,
          usersRepository: UsersRepository) {
         self.presentingViewController = presentingViewController
@@ -22,10 +22,21 @@ class UsersCoordinator: Coordinator {
     }
     func start() {
         let usersViewController = UsersViewController()
-        usersViewController.viewModel = UsersViewModel(usersRepository: usersRepository, delegate: usersViewController)
+        let viewModel = UsersViewModel(usersRepository: usersRepository, delegate: usersViewController)
+        usersViewController.viewModel = viewModel
+        self.viewController = usersViewController
+        viewModel.displayAlbums = { user in
+            self.displayAlbums(for: user)
+        }
         let navigationController = UINavigationController(rootViewController: usersViewController)
         self.rootViewController = navigationController
         presentingViewController.setViewController(navigationController, for: .primary)
         presentingViewController.delegate = usersViewController
+    }
+    fileprivate func displayAlbums(for user: User) {
+        let coordinator = AlbumsCoordinator(user: user,
+                                            presentingViewController: self.viewController!)
+        self.childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }

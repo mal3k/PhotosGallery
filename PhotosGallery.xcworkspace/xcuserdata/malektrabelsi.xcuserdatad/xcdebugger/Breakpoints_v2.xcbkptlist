@@ -5,214 +5,6 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A04049F-8605-4E76-81A5-95FE86B9D85B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Data/Repositories/DefaultUsersRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getUsers(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4A04049F-8605-4E76-81A5-95FE86B9D85B - bf7eac289e49924c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhotosGallery.DefaultUsersRepository.getUsers(completion: (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Data/Repositories/DefaultUsersRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  uuid = "4A04049F-8605-4E76-81A5-95FE86B9D85B - ccb7913e32cb755c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.DefaultUsersRepository.getUsers(completion: (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Data/Repositories/DefaultUsersRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "53">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D4B28567-A3A8-4FFA-A45F-50090E617E7B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Data/Network/API.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "getUsers(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AC74197C-9F31-4216-BAF5-7EC19A5CF32E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Data/Network/APIFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "request(request:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BF00869B-084C-4D8D-9619-E321619D6934"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Data/Repositories/DefaultUsersRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getUsers(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A03606C1-BB24-4437-A849-B64A0A02FC7C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "onViewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A03606C1-BB24-4437-A849-B64A0A02FC7C - 506d1a07b1f44f3f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhotosGallery.UsersViewModel.onViewDidLoad() -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  uuid = "A03606C1-BB24-4437-A849-B64A0A02FC7C - 600637f28f8313e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.UsersViewModel.onViewDidLoad() -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "816DE43B-6DD8-4549-835A-0E9FA9CE92FD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "onViewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "816DE43B-6DD8-4549-835A-0E9FA9CE92FD - 600637f28f8313e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.UsersViewModel.onViewDidLoad() -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "816DE43B-6DD8-4549-835A-0E9FA9CE92FD - 600637f28f8313e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.UserDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.UsersViewModel.onViewDidLoad() -&gt; ()"
-                  moduleName = "PhotosGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery/PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "146">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B1E1E1D4-D76F-4E39-826F-C90B4E5919F6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotosGallery/Presentation/Primary-Master/UsersViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "onViewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             uuid = "C19D8311-59A9-4E87-A0B7-596AB7A17D89"
@@ -231,6 +23,38 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6E9B71B-D235-4765-881B-0318B34B76B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Data/Repositories/DefaultAlbumsRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getAlbums(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "224BCB3D-2199-4A52-8C6A-384AA8ADFE1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Presentation/Primary-Master/Users/UsersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "onFetchCompleted()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -32,4 +32,4 @@ struct Company: Decodable {
     let name, catchPhrase, bs: String
 }
 
-typealias Response = [UserDTO]
+typealias UsersResponse = [UserDTO]

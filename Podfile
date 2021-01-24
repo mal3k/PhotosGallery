@@ -8,6 +8,7 @@ target 'PhotosGallery' do
   # Pods for PhotosGallery
   pod 'iProgressHUD', '~> 1.1.1'
   pod 'URITemplate'
+
   target 'PhotosGalleryTests' do
     inherit! :search_paths
     # Pods for testing

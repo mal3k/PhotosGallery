@@ -7,22 +7,17 @@
 
 import Foundation
 
-protocol UsersViewModelDelegate: class {
-    func onFetchCompleted(with books: [User])
-    func onFetchFailed(with error: String)
-}
-
 class UsersViewModel {
     
     private (set) var users: [User] = []
     private let usersRepository: UsersRepository
-    private weak var delegate: UsersViewModelDelegate?
+    private weak var delegate: ViewModelDelegate?
 
-    init(usersRepository: UsersRepository, delegate: UsersViewModelDelegate) {
+    init(usersRepository: UsersRepository, delegate: ViewModelDelegate) {
         self.usersRepository = usersRepository
         self.delegate = delegate
     }
-    
+    var displayAlbums:((User) -> Void)?
     func onViewDidLoad() {
         usersRepository.getUsers { result in
             switch result {
@@ -37,10 +32,14 @@ class UsersViewModel {
                                 phone: user.phone,
                                 website: user.website)
                 }
-                self.delegate?.onFetchCompleted(with: self.users)
+                self.delegate?.onFetchCompleted()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func didSelectRow(at index: Int) {
+        displayAlbums!(self.users[index])
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol UsersRepository {
-    func getUsers(completion: @escaping (Result<[UserDTO], HTTPNetworkError>) -> Void)
+    func getUsers(completion: @escaping (Result<UsersResponse, HTTPNetworkError>) -> Void)
 }
