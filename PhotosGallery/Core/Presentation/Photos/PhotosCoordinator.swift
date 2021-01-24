@@ -10,14 +10,22 @@ import UIKit
 
 class PhotosCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    private let presentingViewController: UIViewController
     var viewController: UIViewController?
-    init(presentingViewController: UIViewController) {
+    private let presentingViewController: UIViewController
+    private let user: User
+    private let album: Album
+    init(presentingViewController: UIViewController, user: User, album: Album) {
         self.presentingViewController = presentingViewController
+        self.user = user
+        self.album = album
     }
     func start() {
         let photosViewController = PhotosViewController()
-        photosViewController.view.backgroundColor = .yellow
+        let photosViewModel = PhotosViewModel(user: self.user,
+                                              album: self.album,
+                                              photosRepository: DefaultPhotosRepository(api: self.api),
+                                              delegate: photosViewController)
+        photosViewController.viewModel = photosViewModel
         self.viewController = photosViewController
         presentingViewController.navigationController?.pushViewController(photosViewController,
                                                                           animated: true)

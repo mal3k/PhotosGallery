@@ -9,7 +9,7 @@ target 'PhotosGallery' do
   pod 'iProgressHUD', '~> 1.1.1'
   pod 'URITemplate'
   pod 'SwiftLint'
-
+  pod 'Kingfisher', '~> 6.0'
   target 'PhotosGalleryTests' do
     inherit! :search_paths
     # Pods for testing

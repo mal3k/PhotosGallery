@@ -51,4 +51,29 @@ extension API {
             completion(response)
         }
     }
+    func getPhotos(for user: User,
+                   and album: Album,
+                   completion: @escaping (Result<PhotosResponse, HTTPNetworkError>) -> Void) {
+        // /users/{user_id}/photos?albumId=X
+        var components = URLComponents()
+        components.scheme = apiConfig.scheme
+        components.host = apiConfig.host
+        let template = URITemplate(template: Endpoints.photos.rawValue)
+        let path = template.expand(
+            ["user_id": user.id]
+        )
+        components.path = path
+        components.queryItems = [URLQueryItem]()
+        components.queryItems?.append(
+            URLQueryItem(name: "albumId", value: "\(album.id)")
+        )
+        guard let url = components.url
+        else {
+            completion(Result.failure(HTTPNetworkError.invalidURL))
+            return
+        }
+        apiFetcher.request(request: URLRequest(url: url)) { response in
+            completion(response)
+        }
+    }
 }

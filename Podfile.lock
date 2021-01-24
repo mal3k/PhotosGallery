@@ -1,24 +1,28 @@
 PODS:
   - iProgressHUD (1.1.1)
+  - Kingfisher (6.0.1)
   - SwiftLint (0.42.0)
   - URITemplate (3.0.0)
 
 DEPENDENCIES:
   - iProgressHUD (~> 1.1.1)
+  - Kingfisher (~> 6.0)
   - SwiftLint
   - URITemplate
 
 SPEC REPOS:
   trunk:
     - iProgressHUD
+    - Kingfisher
     - SwiftLint
     - URITemplate
 
 SPEC CHECKSUMS:
   iProgressHUD: caa742128253c97f2c2e1ec59e2bbe6cf689df6a
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
   URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: 88e483047d5f128aa450a2d6d37cf64d8966cf35
+PODFILE CHECKSUM: e67e1ef5265a2ce1ed3d935f71fb05e462f44b12
 
 COCOAPODS: 1.8.3

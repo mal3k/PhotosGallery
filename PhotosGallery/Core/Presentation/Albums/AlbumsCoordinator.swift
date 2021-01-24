@@ -23,9 +23,19 @@ class AlbumsCoordinator: Coordinator {
         let albumsViewModel = AlbumsViewModel(user: self.user,
                                               albumsRepository: DefaultAlbumsRepository(api: self.api),
                                               delegate: albumsViewController)
+        albumsViewModel.displayPhotos = {user, album in
+            self.displayPhotos(for: user, and: album)
+        }
         albumsViewController.viewModel = albumsViewModel
         self.viewController = albumsViewController
         presentingViewController.navigationController?.pushViewController(albumsViewController,
                                                                           animated: true)
+    }
+    fileprivate func displayPhotos(for user: User, and album: Album) {
+        let coordinator = PhotosCoordinator(presentingViewController: self.viewController!,
+                                            user: user,
+                                            album: album)
+        self.childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }

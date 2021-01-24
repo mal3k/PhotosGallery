@@ -12,6 +12,7 @@ class AlbumsViewModel {
     private let user: User
     private let albumsRepository: AlbumsRepository
     private weak var delegate: ViewModelDelegate?
+    var displayPhotos: ((User, Album) -> Void)?
     init(user: User, albumsRepository: AlbumsRepository, delegate: ViewModelDelegate) {
         self.user = user
         self.albumsRepository = albumsRepository
@@ -29,5 +30,8 @@ class AlbumsViewModel {
                 print(error)
             }
         }
+    }
+    func didSelectRow(at index: Int) {
+        displayPhotos!(user, self.albums[index])
     }
 }
