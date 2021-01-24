@@ -7,16 +7,13 @@
 
 import Foundation
 
-
 protocol WebServer {
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void)
 }
 class APIFetcher: WebServer {
-    
     private lazy var session: URLSession = URLSession.shared
 
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void) {
-        
         session.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse, response.statusCode == 200
             else {

@@ -29,13 +29,8 @@ class AlbumsViewController: UIViewController, UISplitViewControllerDelegate {
         view.showProgress()
         viewModel.onViewDidLoad()
     }
-
-    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
-        return .primary
-    }
 }
 extension AlbumsViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.albums.count
     }
@@ -57,7 +52,6 @@ extension AlbumsViewController: ViewModelDelegate {
             self.tableView.reloadData()
         }
     }
-    
     func onFetchFailed(with error: String) {
         print(error)
     }

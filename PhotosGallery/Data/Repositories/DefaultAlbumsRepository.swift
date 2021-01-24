@@ -9,7 +9,6 @@ import Foundation
 
 class DefaultAlbumsRepository {
     private let api: API
-    
     init(api: API) {
         self.api = api
     }

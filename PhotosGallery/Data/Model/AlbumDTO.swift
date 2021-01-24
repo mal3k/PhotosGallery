@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable identifier_name
 // MARK: - AlbumDTO
 struct AlbumDTO: Decodable {
     let userID, id: Int

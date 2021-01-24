@@ -9,10 +9,8 @@ import Foundation
 import URITemplate
 
 class API {
-    
     private let apiConfig: APIConfig
     private let apiFetcher: WebServer
-    
     init(apiConfig: APIConfig, apiFetcher: WebServer) {
         self.apiConfig = apiConfig
         self.apiFetcher = apiFetcher
@@ -25,7 +23,6 @@ extension API {
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
         components.path = Endpoints.users.rawValue
-        
         guard let url = components.url
         else {
             completion(Result.failure(HTTPNetworkError.invalidURL))
@@ -50,7 +47,6 @@ extension API {
             completion(Result.failure(HTTPNetworkError.invalidURL))
             return
         }
-        
         apiFetcher.request(request: URLRequest(url: url)) { response in
             completion(response)
         }

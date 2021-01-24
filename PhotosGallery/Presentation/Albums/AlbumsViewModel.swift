@@ -8,18 +8,15 @@
 import Foundation
 
 class AlbumsViewModel {
-    
     private (set) var albums: [Album] = []
     private let user: User
     private let albumsRepository: AlbumsRepository
     private weak var delegate: ViewModelDelegate?
-    
     init(user: User, albumsRepository: AlbumsRepository, delegate: ViewModelDelegate) {
         self.user = user
         self.albumsRepository = albumsRepository
         self.delegate = delegate
     }
-    
     func onViewDidLoad() {
         albumsRepository.getAlbums(for: self.user) { result in
             switch result {

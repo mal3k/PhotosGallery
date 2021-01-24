@@ -9,14 +9,12 @@ import Foundation
 
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
-    
     func start()
 }
 
 extension Coordinator {
-    
-    //MARK: Dependency Injection Container like
-    private var apiConfig : APIConfig {
+    // MARK: Dependency Injection Container like
+    private var apiConfig: APIConfig {
       return APIConfig(scheme: Globals.SCHEME,
                        host: Globals.HOST)
     }

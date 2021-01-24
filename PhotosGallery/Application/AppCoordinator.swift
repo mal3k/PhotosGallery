@@ -10,13 +10,11 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    
     let window: UIWindow
     init(window: UIWindow) {
         self.window = window
     }
     func start() {
-        
         let rootViewController = UINavigationController()
         let usersCoordinator = UsersCoordinator(presentingViewController: rootViewController,
                                                 usersRepository: DefaultUsersRepository(api: self.api))
@@ -24,5 +22,5 @@ class AppCoordinator: Coordinator {
         usersCoordinator.start()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-    }    
+    }
 }

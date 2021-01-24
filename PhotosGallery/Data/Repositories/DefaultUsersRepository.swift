@@ -8,9 +8,7 @@
 import Foundation
 
 class DefaultUsersRepository {
-    
     private let api: API
-    
     init(api: API) {
         self.api = api
     }

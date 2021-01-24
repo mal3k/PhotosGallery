@@ -15,7 +15,6 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
     var user: User! {
         didSet {
             emailLabel.text = user.email
@@ -33,5 +32,4 @@ class UserTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

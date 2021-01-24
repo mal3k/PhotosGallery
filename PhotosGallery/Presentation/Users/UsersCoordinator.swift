@@ -10,7 +10,6 @@ import UIKit
 
 class UsersCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    
     private let presentingViewController: UINavigationController
     private let usersRepository: UsersRepository
     private var viewController: UIViewController?

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+// swiftlint:disable line_length
 class PhotosGalleryUITests: XCTestCase {
 
     override func setUpWithError() throws {

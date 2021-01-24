@@ -7,18 +7,13 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController, UISplitViewControllerDelegate {
+class PhotosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
-        return .primary
-    }
-
     /*
     // MARK: - Navigation
 

@@ -8,7 +8,6 @@
 import Foundation
 
 class UsersViewModel {
-    
     private (set) var users: [User] = []
     private let usersRepository: UsersRepository
     private weak var delegate: ViewModelDelegate?
@@ -17,7 +16,7 @@ class UsersViewModel {
         self.usersRepository = usersRepository
         self.delegate = delegate
     }
-    var displayAlbums:((User) -> Void)?
+    var displayAlbums: ((User) -> Void)?
     func onViewDidLoad() {
         usersRepository.getUsers { result in
             switch result {
@@ -38,7 +37,6 @@ class UsersViewModel {
             }
         }
     }
-    
     func didSelectRow(at index: Int) {
         displayAlbums!(self.users[index])
     }
