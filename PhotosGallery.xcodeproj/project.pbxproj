@@ -327,8 +327,9 @@
 			isa = PBXGroup;
 			children = (
 				C44695EC25BDAB690013580F /* ViewModelDelegate.swift */,
-				C477E39D25B81ED4004EB844 /* Primary-Master */,
-				C477E39F25B81EE1004EB844 /* Secondary-Details */,
+				C46B712525BB2071001DFAAC /* Users */,
+				C46B712625BB2077001DFAAC /* Albums */,
+				C477E39F25B81EE1004EB844 /* Photos */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -343,22 +344,13 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		C477E39D25B81ED4004EB844 /* Primary-Master */ = {
-			isa = PBXGroup;
-			children = (
-				C46B712525BB2071001DFAAC /* Users */,
-				C46B712625BB2077001DFAAC /* Albums */,
-			);
-			path = "Primary-Master";
-			sourceTree = "<group>";
-		};
-		C477E39F25B81EE1004EB844 /* Secondary-Details */ = {
+		C477E39F25B81EE1004EB844 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
 				C477E3AA25B81F19004EB844 /* PhotosViewController.swift */,
 				C42DA2BC25B89AD800752739 /* PhotosCoordinator.swift */,
 			);
-			path = "Secondary-Details";
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

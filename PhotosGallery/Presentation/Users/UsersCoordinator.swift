@@ -11,11 +11,10 @@ import UIKit
 class UsersCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     
-    private let presentingViewController: UISplitViewController
+    private let presentingViewController: UINavigationController
     private let usersRepository: UsersRepository
-    private var rootViewController: UINavigationController?
     private var viewController: UIViewController?
-    init(presentingViewController: UISplitViewController,
+    init(presentingViewController: UINavigationController,
          usersRepository: UsersRepository) {
         self.presentingViewController = presentingViewController
         self.usersRepository = usersRepository
@@ -28,10 +27,7 @@ class UsersCoordinator: Coordinator {
         viewModel.displayAlbums = { user in
             self.displayAlbums(for: user)
         }
-        let navigationController = UINavigationController(rootViewController: usersViewController)
-        self.rootViewController = navigationController
-        presentingViewController.setViewController(navigationController, for: .primary)
-        presentingViewController.delegate = usersViewController
+        self.presentingViewController.pushViewController(usersViewController, animated: true)
     }
     fileprivate func displayAlbums(for user: User) {
         let coordinator = AlbumsCoordinator(user: user,

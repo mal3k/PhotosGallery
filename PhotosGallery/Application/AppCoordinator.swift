@@ -17,18 +17,12 @@ class AppCoordinator: Coordinator {
     }
     func start() {
         
-        let splitViewController = UISplitViewController(style: .doubleColumn)
-
-        let usersCoordinator = UsersCoordinator(presentingViewController: splitViewController,
+        let rootViewController = UINavigationController()
+        let usersCoordinator = UsersCoordinator(presentingViewController: rootViewController,
                                                 usersRepository: DefaultUsersRepository(api: self.api))
         self.childCoordinators.append(usersCoordinator)
         usersCoordinator.start()
-        
-        let photosCoordinator = PhotosCoordinator(presentingViewController: splitViewController)
-        self.childCoordinators.append(photosCoordinator)
-        photosCoordinator.start()
-        
-        window.rootViewController = splitViewController
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }    
 }
