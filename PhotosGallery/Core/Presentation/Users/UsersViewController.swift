@@ -8,7 +8,7 @@
 import UIKit
 import iProgressHUD
 
-class UsersViewController: UIViewController, UISplitViewControllerDelegate {
+class UsersViewController: UIViewController {
 
     var viewModel: UsersViewModel!
     private var tableView: UITableView!

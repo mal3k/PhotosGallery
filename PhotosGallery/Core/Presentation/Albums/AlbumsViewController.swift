@@ -8,7 +8,7 @@
 import UIKit
 import iProgressHUD
 
-class AlbumsViewController: UIViewController, UISplitViewControllerDelegate {
+class AlbumsViewController: UIViewController {
 
     private static let cellIdentifier = "AlbumCell"
     var viewModel: AlbumsViewModel!

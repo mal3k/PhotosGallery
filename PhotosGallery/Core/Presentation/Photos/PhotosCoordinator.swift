@@ -10,15 +10,16 @@ import UIKit
 
 class PhotosCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    let presentingViewController: UISplitViewController
+    private let presentingViewController: UIViewController
     var viewController: UIViewController?
-    init(presentingViewController: UISplitViewController) {
+    init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
     }
     func start() {
         let photosViewController = PhotosViewController()
         photosViewController.view.backgroundColor = .yellow
         self.viewController = photosViewController
-        presentingViewController.setViewController(photosViewController, for: .secondary)
+        presentingViewController.navigationController?.pushViewController(photosViewController,
+                                                                          animated: true)
     }
 }
