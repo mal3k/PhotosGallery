@@ -6,7 +6,7 @@ target 'PhotosGallery' do
   use_frameworks!
 
   # Pods for PhotosGallery
-  pod 'iProgressHUD', '~> 1.1.1'
+  pod 'JGProgressHUD'
   pod 'URITemplate'
   pod 'SwiftLint'
   pod 'Kingfisher', '~> 6.0'

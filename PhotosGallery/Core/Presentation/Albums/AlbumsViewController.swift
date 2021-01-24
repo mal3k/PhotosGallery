@@ -6,13 +6,14 @@
 //
 
 import UIKit
-import iProgressHUD
+import JGProgressHUD
 
 class AlbumsViewController: UIViewController {
 
     private static let cellIdentifier = "AlbumCell"
     var viewModel: AlbumsViewModel!
     private var tableView: UITableView!
+    private lazy var progressHUD = JGProgressHUD()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,8 @@ class AlbumsViewController: UIViewController {
         tableView.delegate = self
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: AlbumsViewController.cellIdentifier)
-        let progressHUD = iProgressHUD.sharedInstance()
-        progressHUD.indicatorStyle = .ballPulseSync
-        progressHUD.attachProgress(toView: view)
-        view.showProgress()
+        progressHUD.style = .dark
+        progressHUD.show(in: self.view)
         viewModel.onViewDidLoad()
     }
 }
@@ -49,7 +48,7 @@ extension AlbumsViewController: UITableViewDataSource, UITableViewDelegate {
 extension AlbumsViewController: ViewModelDelegate {
     func onFetchCompleted() {
         DispatchQueue.main.async {
-            self.view.dismissProgress()
+            self.progressHUD.dismiss()
             self.tableView.reloadData()
         }
     }

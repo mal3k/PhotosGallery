@@ -6,12 +6,13 @@
 //
 
 import UIKit
-import iProgressHUD
+import JGProgressHUD
 
 class UsersViewController: UIViewController {
 
     var viewModel: UsersViewModel!
     private var tableView: UITableView!
+    private lazy var progressHUD = JGProgressHUD()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,10 +22,8 @@ class UsersViewController: UIViewController {
         view.addSubview(tableView)
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil),
                            forCellReuseIdentifier: UserTableViewCell.identifier)
-        let progressHUD = iProgressHUD.sharedInstance()
-        progressHUD.indicatorStyle = .ballPulseSync
-        progressHUD.attachProgress(toView: view)
-        view.showProgress()
+        progressHUD.style = .dark
+        progressHUD.show(in: self.view)
         viewModel.onViewDidLoad()
     }
 }
@@ -48,7 +47,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
 extension UsersViewController: ViewModelDelegate {
     func onFetchCompleted() {
         DispatchQueue.main.async {
-            self.view.dismissProgress()
+            self.progressHUD.dismiss()
             self.tableView.reloadData()
         }
     }

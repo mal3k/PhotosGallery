@@ -7,11 +7,14 @@
 
 import UIKit
 import Kingfisher
+import JGProgressHUD
 
 class PhotosViewController: UIViewController {
 
     var viewModel: PhotosViewModel!
     private var collectionView: UICollectionView!
+    private lazy var progressHUD = JGProgressHUD()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: UICollectionViewFlowLayout())
@@ -21,6 +24,8 @@ class PhotosViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
+        progressHUD.style = .dark
+        progressHUD.show(in: self.view)
         viewModel.onViewDidLoad()
     }
 }
@@ -54,6 +59,7 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout {
 extension PhotosViewController: ViewModelDelegate {
     func onFetchCompleted() {
         DispatchQueue.main.async {
+            self.progressHUD.dismiss()
             self.collectionView.reloadData()
         }
     }
