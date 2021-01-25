@@ -8,15 +8,26 @@
 import Foundation
 
 class UsersViewModel {
-    private (set) var users: [User] = []
+    private(set) var users: [User] = []
+    private(set) var filteredUsers: [User] = []
     private let usersRepository: UsersRepository
     private weak var delegate: ViewModelDelegate?
+    var displayAlbums: ((User) -> Void)?
 
     init(usersRepository: UsersRepository, delegate: ViewModelDelegate) {
         self.usersRepository = usersRepository
         self.delegate = delegate
     }
-    var displayAlbums: ((User) -> Void)?
+    func onSearch(with text: String) {
+        filteredUsers.removeAll()
+        for user in users {
+            if user.name.lowercased().contains(text.lowercased()) {
+                print("Match found : \(user.name.lowercased()) \(text.lowercased())")
+                filteredUsers.append(user)
+            }
+        }
+        delegate?.reloadSearchResults()
+    }
     func onViewDidLoad() {
         usersRepository.getUsers { result in
             switch result {
@@ -39,5 +50,8 @@ class UsersViewModel {
     }
     func didSelectRow(at index: Int) {
         displayAlbums!(self.users[index])
+    }
+    func didSelectSearchResultsRow(at index: Int) {
+        displayAlbums!(self.filteredUsers[index])
     }
 }

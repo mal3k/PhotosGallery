@@ -10,4 +10,10 @@ import Foundation
 protocol ViewModelDelegate: class {
     func onFetchCompleted()
     func onFetchFailed(with error: String)
+    func reloadSearchResults()
+}
+
+extension ViewModelDelegate {
+    func reloadSearchResults() {
+    }
 }
