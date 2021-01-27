@@ -12,7 +12,7 @@ class UsersCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     private let presentingViewController: UINavigationController
     private let usersRepository: UsersRepository
-    private var viewController: UIViewController?
+    private weak var viewController: UIViewController?
     init(presentingViewController: UINavigationController,
          usersRepository: UsersRepository) {
         self.presentingViewController = presentingViewController
@@ -30,8 +30,13 @@ class UsersCoordinator: Coordinator {
     }
     fileprivate func displayAlbums(for user: User) {
         let coordinator = AlbumsCoordinator(user: user,
-                                            presentingViewController: self.viewController!)
+                                            presentingViewController: self.viewController!, delegate: self)
         self.childCoordinators.append(coordinator)
         coordinator.start()
+    }
+}
+extension UsersCoordinator: CoordinatorDelegate {
+    func coordinatorDidFinish(_ coordinator: Coordinator) {
+        childCoordinators = childCoordinators.filter { $0 !== coordinator }
     }
 }

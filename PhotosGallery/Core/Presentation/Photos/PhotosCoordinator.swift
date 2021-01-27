@@ -10,14 +10,15 @@ import UIKit
 
 class PhotosCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    var viewController: UIViewController?
     private let presentingViewController: UIViewController
     private let user: User
     private let album: Album
-    init(presentingViewController: UIViewController, user: User, album: Album) {
+    private weak var delegate: CoordinatorDelegate?
+    init(presentingViewController: UIViewController, user: User, album: Album, delegate: CoordinatorDelegate) {
         self.presentingViewController = presentingViewController
         self.user = user
         self.album = album
+        self.delegate = delegate
     }
     func start() {
         let photosViewController = PhotosViewController()
@@ -26,8 +27,10 @@ class PhotosCoordinator: Coordinator {
                                               album: self.album,
                                               photosRepository: photosRepository,
                                               delegate: photosViewController)
+        photosViewModel.dismiss = {
+            self.delegate?.coordinatorDidFinish(self)
+        }
         photosViewController.viewModel = photosViewModel
-        self.viewController = photosViewController
         presentingViewController.navigationController?.pushViewController(photosViewController,
                                                                           animated: true)
     }

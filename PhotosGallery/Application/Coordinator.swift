@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 import CoreData
 
-protocol Coordinator {
+protocol CoordinatorDelegate: class {
+    // ⚠️ Dismiss no-longer-used coordinator and free up its allocated memory
+    func coordinatorDidFinish(_ coordinator: Coordinator)
+}
+protocol Coordinator: class {
     var childCoordinators: [Coordinator] { get set }
     func start()
 }

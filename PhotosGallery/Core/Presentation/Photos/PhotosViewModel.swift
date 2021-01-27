@@ -15,6 +15,7 @@ class PhotosViewModel {
     private weak var delegate: ViewModelDelegate?
     private var photos: [Photo] = []
     private(set) var totalCount: Int = 0
+    var dismiss: (() -> Void)?
     init(user: User, album: Album, photosRepository: PhotosRepository, delegate: ViewModelDelegate) {
         self.user = user
         self.album = album
@@ -23,6 +24,9 @@ class PhotosViewModel {
     }
     func onViewDidLoad() {
         fetchPhotos()
+    }
+    func onDeinit() {
+        dismiss!()
     }
     func getPhoto(at index: Int) -> Photo {
         return self.photos[index]

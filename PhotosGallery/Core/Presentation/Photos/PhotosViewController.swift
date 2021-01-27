@@ -28,6 +28,9 @@ class PhotosViewController: UIViewController {
         progressHUD.show(in: self.view)
         viewModel.onViewDidLoad()
     }
+    deinit {
+        viewModel.onDeinit()
+    }
 }
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate {

@@ -28,6 +28,9 @@ class AlbumsViewController: UIViewController {
         progressHUD.show(in: self.view)
         viewModel.onViewDidLoad()
     }
+    deinit {
+        viewModel.onDeinit()
+    }
 }
 extension AlbumsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

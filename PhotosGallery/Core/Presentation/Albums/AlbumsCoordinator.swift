@@ -10,13 +10,16 @@ import UIKit
 
 class AlbumsCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    private var viewController: UIViewController?
+    private weak var viewController: UIViewController?
     private let user: User
     private let presentingViewController: UIViewController
+    private weak var delegate: CoordinatorDelegate?
     init(user: User,
-         presentingViewController: UIViewController) {
+         presentingViewController: UIViewController,
+         delegate: CoordinatorDelegate) {
         self.user = user
         self.presentingViewController = presentingViewController
+        self.delegate = delegate
     }
     func start() {
         let albumsViewController = AlbumsViewController()
@@ -27,6 +30,9 @@ class AlbumsCoordinator: Coordinator {
         albumsViewModel.displayPhotos = {user, album in
             self.displayPhotos(for: user, and: album)
         }
+        albumsViewModel.dismiss = {
+            self.delegate?.coordinatorDidFinish(self)
+        }
         albumsViewController.viewModel = albumsViewModel
         self.viewController = albumsViewController
         presentingViewController.navigationController?.pushViewController(albumsViewController,
@@ -35,8 +41,13 @@ class AlbumsCoordinator: Coordinator {
     fileprivate func displayPhotos(for user: User, and album: Album) {
         let coordinator = PhotosCoordinator(presentingViewController: self.viewController!,
                                             user: user,
-                                            album: album)
+                                            album: album, delegate: self)
         self.childCoordinators.append(coordinator)
         coordinator.start()
+    }
+}
+extension AlbumsCoordinator: CoordinatorDelegate {
+    func coordinatorDidFinish(_ coordinator: Coordinator) {
+        childCoordinators = childCoordinators.filter { $0 !== coordinator }
     }
 }
