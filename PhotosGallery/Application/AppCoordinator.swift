@@ -10,7 +10,7 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    let window: UIWindow
+    private let window: UIWindow
     init(window: UIWindow) {
         self.window = window
     }
