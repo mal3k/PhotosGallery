@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//import URITemplate
 
 class API {
     private let apiConfig: APIConfig

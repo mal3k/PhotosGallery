@@ -54,12 +54,16 @@ extension PhotosViewModel {
                     else {
                         fatalError("Cannot have photo with nil foreign key")
                     }
+                    var image: UIImage?
+                    if let data = photo.value(forKey: "data") as? Data {
+                        image = UIImage(data: data)
+                    }
                     return Photo(id: id,
                                  albumID: albumID,
                                  userID: userID,
                                  title: photo.value(forKey: "title") as? String ?? "",
                                  thumbnailURL: photo.value(forKey: "thumbnail_url") as? String ?? "",
-                                 data: nil) // extract data binary from CoreData
+                                 data: image)
                 }
                 self?.totalCount = self?.photos.count ?? 0
                 self?.delegate?.onFetchCompleted()

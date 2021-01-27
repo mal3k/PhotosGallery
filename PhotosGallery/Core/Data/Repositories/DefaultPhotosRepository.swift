@@ -36,21 +36,29 @@ extension DefaultPhotosRepository: PhotosRepository {
         }.resume()
     }
     func saveBinaryData(_ data: Data, for photo: Photo) {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PhotoEntity")
-        fetchRequest.predicate = NSPredicate(format: "user_id == %@ AND album_id == %@",
-                                             "\(photo.userID)",
-                                             "\(photo.albumID)")
-        do {
-            let results = try managedContext.fetch(fetchRequest)
-            if results.count == 0 {
-                let photo = results.first
-                photo?.setValue(data, forKey: "data")
-             }
-            try managedContext.save()
-//            completion(Result.success(albums))
-        } catch let error {
-//            completion(Result.failure(error))
-            print(error.localizedDescription)
+        autoreleasepool {
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PhotoEntity")
+            fetchRequest.predicate = NSPredicate(format: "user_id == %@ AND album_id == %@ AND photo_id == %@",
+                                                 "\(photo.userID)",
+                                                 "\(photo.albumID)",
+                                                 "\(photo.id)")
+            do {
+                let results = try managedContext.fetch(fetchRequest)
+                if !results.isEmpty {
+                    let photo = results.first
+                    photo?.setValue(data, forKey: "data")
+                }
+                do {
+                    try managedContext.save()
+                    print("Photo saved successfully")
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+                //            completion(Result.success(albums))
+            } catch let error {
+                //            completion(Result.failure(error))
+                print(error.localizedDescription)
+            }
         }
     }
     func fetchPhotosWarehouse(for user: User,
@@ -60,8 +68,8 @@ extension DefaultPhotosRepository: PhotosRepository {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PhotoEntity")
         fetchRequest.predicate = NSPredicate(format: "user_id == %@ AND album_id == %@", "\(user.id)", "\(album.id)")
         do {
-            let albums = try managedContext.fetch(fetchRequest)
-            completion(Result.success(albums))
+            let photos = try managedContext.fetch(fetchRequest)
+            completion(Result.success(photos))
         } catch let error {
             completion(Result.failure(error))
             print(error.localizedDescription)
