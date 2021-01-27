@@ -20,11 +20,10 @@
         <attribute name="phone_number" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="String"/>
-        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AlbumEntity"/>
     </entity>
     <elements>
-        <element name="AlbumEntity" positionX="187.553466796875" positionY="-284.6777954101562" width="128" height="74"/>
         <element name="PhotoEntity" positionX="-101.8211669921875" positionY="-211.5318298339844" width="128" height="119"/>
-        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="AlbumEntity" positionX="-351.6099243164062" positionY="-185.6502075195312" width="128" height="88"/>
+        <element name="UserEntity" positionX="-340.5390625" positionY="-602.1647644042969" width="128" height="133"/>
     </elements>
 </model>

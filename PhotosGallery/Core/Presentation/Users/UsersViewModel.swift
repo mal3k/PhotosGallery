@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UsersViewModel {
+class UsersViewModel: Printable {
     private(set) var users: [User] = []
     private(set) var filteredUsers: [User] = []
     private let usersRepository: UsersRepository
@@ -64,7 +64,7 @@ extension UsersViewModel {
                 }
                 self.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self.log(with: error.localizedDescription)
             }
         }
     }
@@ -85,7 +85,7 @@ extension UsersViewModel {
                 self.usersRepository.saveToUsersWarehouse(usersDTO)
                 self.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self.log(with: error.localizedDescription)
             }
         }
     }

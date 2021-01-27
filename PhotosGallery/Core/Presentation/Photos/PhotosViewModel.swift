@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PhotosViewModel {
+class PhotosViewModel: Printable {
     private let user: User
     private let album: Album
     private let photosRepository: PhotosRepository
@@ -72,7 +72,7 @@ extension PhotosViewModel {
                 self?.totalCount = self?.photos.count ?? 0
                 self?.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self?.log(with: error.localizedDescription)
             }
         }
     }
@@ -93,7 +93,7 @@ extension PhotosViewModel {
                 self?.photosRepository.saveToPhotosWarehouse(photosDTO, user: self!.user)
                 self?.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self?.log(with: error.localizedDescription)
             }
         }
     }
@@ -115,7 +115,7 @@ extension PhotosViewModel {
                 self.delegate?.refreshCell(at: item)
                 self.saveRemoteImageToPhotosWarehouse(imageData, photo: photo)
             case .failure(let error):
-                print(error.localizedDescription)
+                self.log(with: error.localizedDescription)
             }
         }
     }

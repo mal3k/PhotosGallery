@@ -56,6 +56,5 @@ extension AlbumsViewController: ViewModelDelegate {
         }
     }
     func onFetchFailed(with error: String) {
-        print(error)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class DefaultAlbumsRepository {
+class DefaultAlbumsRepository: Printable {
     private let api: API
     private let managedContext: NSManagedObjectContext
     init(api: API, managedContext: NSManagedObjectContext) {
@@ -27,7 +27,7 @@ extension DefaultAlbumsRepository: AlbumsRepository {
             completion(Result.success(albums))
         } catch let error {
             completion(Result.failure(error))
-            print(error.localizedDescription)
+            log(with: error.localizedDescription)
         }
     }
     func getAlbums(for user: User, completion: @escaping (Result<AlbumsResponse, HTTPNetworkError>) -> Void) {
@@ -49,7 +49,7 @@ extension DefaultAlbumsRepository: AlbumsRepository {
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
-                    print("Could not save. \(error), \(error.userInfo)")
+                    log(with: "Could not save. \(error), \(error.userInfo)")
                 }
             }
         }

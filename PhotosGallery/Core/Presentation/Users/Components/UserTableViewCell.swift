@@ -10,11 +10,11 @@ import UIKit
 class UserTableViewCell: UITableViewCell {
 
     static let identifier = "UserCell"
-    @IBOutlet weak var websiteLabel: UILabel!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var websiteLabel: UILabel!
+    @IBOutlet private weak var phoneNumberLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     var user: User! {
         didSet {
             emailLabel.text = user.email

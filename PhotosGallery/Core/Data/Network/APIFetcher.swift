@@ -10,7 +10,7 @@ import Foundation
 protocol HTTPClient {
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void)
 }
-class APIFetcher: HTTPClient {
+class APIFetcher: HTTPClient, Printable {
     private lazy var session: URLSession = URLSession.shared
 
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void) {
@@ -29,7 +29,7 @@ class APIFetcher: HTTPClient {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(Result.success(decodedData))
             } catch let error {
-                print(error)
+                self.log(with: error.localizedDescription)
                 completion(Result.failure(HTTPNetworkError.failed))
             }
         }.resume()

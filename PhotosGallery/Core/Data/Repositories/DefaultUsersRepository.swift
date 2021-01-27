@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class DefaultUsersRepository {
+class DefaultUsersRepository: Printable {
     private let api: API
     private let managedContext: NSManagedObjectContext
     init(api: API,
@@ -27,7 +27,7 @@ extension DefaultUsersRepository: UsersRepository {
             completion(Result.success(users))
         } catch let error {
             completion(Result.failure(error))
-            print(error.localizedDescription)
+            log(with: error.localizedDescription)
         }
     }
     func getUsers(completion: @escaping (Result<[UserDTO], HTTPNetworkError>) -> Void) {
@@ -52,7 +52,7 @@ extension DefaultUsersRepository: UsersRepository {
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
-                    print("Could not save. \(error), \(error.userInfo)")
+                    log(with: "Could not save. \(error), \(error.userInfo)")
                 }
             }
         }

@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class DefaultPhotosRepository {
+class DefaultPhotosRepository: Printable {
     private let api: API
     private let managedContext: NSManagedObjectContext
     init(api: API, managedContext: NSManagedObjectContext) {
@@ -52,12 +52,12 @@ extension DefaultPhotosRepository: PhotosRepository {
                     try managedContext.save()
                     print("Photo saved successfully")
                 } catch let error {
-                    print(error.localizedDescription)
+                    log(with: error.localizedDescription)
                 }
                 //            completion(Result.success(albums))
             } catch let error {
+                log(with: error.localizedDescription)
                 //            completion(Result.failure(error))
-                print(error.localizedDescription)
             }
         }
     }
@@ -72,7 +72,7 @@ extension DefaultPhotosRepository: PhotosRepository {
             completion(Result.success(photos))
         } catch let error {
             completion(Result.failure(error))
-            print(error.localizedDescription)
+            log(with: error.localizedDescription)
         }
     }
     func saveToPhotosWarehouse(_ photos: PhotosResponse, user: User) {
@@ -92,7 +92,7 @@ extension DefaultPhotosRepository: PhotosRepository {
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
-                    print("Could not save. \(error), \(error.userInfo)")
+                    log(with: "Could not save. \(error), \(error.userInfo)")
                 }
             }
         }

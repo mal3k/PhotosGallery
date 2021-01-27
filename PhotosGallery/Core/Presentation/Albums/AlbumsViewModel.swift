@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlbumsViewModel {
+class AlbumsViewModel: Printable {
     private (set) var albums: [Album] = []
     private let user: User
     private let albumsRepository: AlbumsRepository
@@ -55,7 +55,7 @@ extension AlbumsViewModel {
                 }
                 self?.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self?.log(with: error.localizedDescription)
             }
         })
     }
@@ -70,7 +70,7 @@ extension AlbumsViewModel {
                 self.albumsRepository.saveToAlbumsWarehouse(albumsDTO)
                 self.delegate?.onFetchCompleted()
             case .failure(let error):
-                print(error)
+                self.log(with: error.localizedDescription)
             }
         }
     }
