@@ -2,27 +2,23 @@ PODS:
   - JGProgressHUD (2.2)
   - Kingfisher (6.0.1)
   - SwiftLint (0.42.0)
-  - URITemplate (3.0.0)
 
 DEPENDENCIES:
   - JGProgressHUD
   - Kingfisher (~> 6.0)
   - SwiftLint
-  - URITemplate
 
 SPEC REPOS:
   trunk:
     - JGProgressHUD
     - Kingfisher
     - SwiftLint
-    - URITemplate
 
 SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   Kingfisher: adde87a4f74f6a3845395769354efff593581740
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
-  URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: 8aa34570618aba35024167c7901f211ed6ad1413
+PODFILE CHECKSUM: f0a1e5f7546ab4306886667c5b434d2feed574f8
 
 COCOAPODS: 1.8.3

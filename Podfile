@@ -7,7 +7,6 @@ target 'PhotosGallery' do
 
   # Pods for PhotosGallery
   pod 'JGProgressHUD'
-  pod 'URITemplate'
   pod 'SwiftLint'
   pod 'Kingfisher', '~> 6.0'
   target 'PhotosGalleryTests' do
