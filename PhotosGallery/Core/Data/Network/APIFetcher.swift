@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol WebServer {
+protocol HTTPClient {
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void)
 }
-class APIFetcher: WebServer {
+class APIFetcher: HTTPClient {
     private lazy var session: URLSession = URLSession.shared
 
     func request<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, HTTPNetworkError>) -> Void) {

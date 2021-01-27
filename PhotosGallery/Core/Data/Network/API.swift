@@ -9,8 +9,8 @@ import Foundation
 
 class API {
     private let apiConfig: APIConfig
-    private let apiFetcher: WebServer
-    init(apiConfig: APIConfig, apiFetcher: WebServer) {
+    private let apiFetcher: HTTPClient
+    init(apiConfig: APIConfig, apiFetcher: HTTPClient) {
         self.apiConfig = apiConfig
         self.apiFetcher = apiFetcher
     }
