@@ -16,8 +16,9 @@ class AppCoordinator: Coordinator {
     }
     func start() {
         let rootViewController = UINavigationController()
+        let usersRepository = DefaultUsersRepository(api: self.api, managedContext: self.managedContext)
         let usersCoordinator = UsersCoordinator(presentingViewController: rootViewController,
-                                                usersRepository: DefaultUsersRepository(api: self.api))
+                                                usersRepository: usersRepository)
         self.childCoordinators.append(usersCoordinator)
         usersCoordinator.start()
         window.rootViewController = rootViewController

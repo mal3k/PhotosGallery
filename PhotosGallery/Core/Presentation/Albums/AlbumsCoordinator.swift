@@ -20,8 +20,9 @@ class AlbumsCoordinator: Coordinator {
     }
     func start() {
         let albumsViewController = AlbumsViewController()
+        let albumsRepository = DefaultAlbumsRepository(api: self.api, managedContext: self.managedContext)
         let albumsViewModel = AlbumsViewModel(user: self.user,
-                                              albumsRepository: DefaultAlbumsRepository(api: self.api),
+                                              albumsRepository: albumsRepository,
                                               delegate: albumsViewController)
         albumsViewModel.displayPhotos = {user, album in
             self.displayPhotos(for: user, and: album)

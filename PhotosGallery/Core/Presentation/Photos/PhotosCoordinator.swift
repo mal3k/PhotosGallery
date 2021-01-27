@@ -21,9 +21,10 @@ class PhotosCoordinator: Coordinator {
     }
     func start() {
         let photosViewController = PhotosViewController()
+        let photosRepository = DefaultPhotosRepository(api: self.api, managedContext: self.managedContext)
         let photosViewModel = PhotosViewModel(user: self.user,
                                               album: self.album,
-                                              photosRepository: DefaultPhotosRepository(api: self.api),
+                                              photosRepository: photosRepository,
                                               delegate: photosViewController)
         photosViewController.viewModel = photosViewModel
         self.viewController = photosViewController

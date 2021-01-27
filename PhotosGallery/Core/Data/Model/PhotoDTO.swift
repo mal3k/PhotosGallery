@@ -11,11 +11,11 @@ import Foundation
 struct PhotoDTO: Decodable {
     let albumID, id: Int
     let title: String
-    let url, thumbnailURL: String
+    let thumbnailURL: String
 
     enum CodingKeys: String, CodingKey {
         case albumID = "albumId"
-        case id, title, url
+        case id, title
         case thumbnailURL = "thumbnailUrl"
     }
 }

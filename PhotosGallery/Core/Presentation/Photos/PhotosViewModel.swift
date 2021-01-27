@@ -6,13 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 class PhotosViewModel {
     private let user: User
     private let album: Album
     private let photosRepository: PhotosRepository
     private weak var delegate: ViewModelDelegate?
-    private(set) var photos: [Photo] = []
+    private var photos: [Photo] = []
+    private(set) var totalCount: Int = 0
     init(user: User, album: Album, photosRepository: PhotosRepository, delegate: ViewModelDelegate) {
         self.user = user
         self.album = album
@@ -20,17 +22,91 @@ class PhotosViewModel {
         self.delegate = delegate
     }
     func onViewDidLoad() {
-        photosRepository.getPhotos(for: user, and: album) { result in
+        fetchPhotos()
+    }
+    func getPhoto(at index: Int) -> Photo {
+        return self.photos[index]
+    }
+    func downloadPhoto(at index: Int) {
+        self.downloadRemoteFile(self.photos[index], for: index)
+    }
+}
+
+extension PhotosViewModel {
+    fileprivate func fetchPhotos() {
+        photosRepository.fetchPhotosWarehouse(for: user, and: album) {[weak self] result in
             switch result {
-            case .success(let photosDTO):
-                print(photosDTO)
-                self.photos = photosDTO.map { photo in
-                    return Photo(title: photo.title, url: photo.url, thumbnailURL: photo.thumbnailURL)
+            case .success(let photos):
+                guard !photos.isEmpty
+                else {
+                    self?.fetchRemotePhotos()
+                    return
                 }
-                self.delegate?.onFetchCompleted()
+                // Map to domain model
+                self?.photos = photos.map { photo in
+                    // swiftlint:disable identifier_name
+                    guard let id = photo.value(forKey: "photo_id") as? Int
+                    else {
+                        fatalError("Cannot have photo with nil Id")
+                    }
+                    guard let albumID = photo.value(forKey: "album_id") as? Int,
+                          let userID = photo.value(forKey: "user_id") as? Int
+                    else {
+                        fatalError("Cannot have photo with nil foreign key")
+                    }
+                    return Photo(id: id,
+                                 albumID: albumID,
+                                 userID: userID,
+                                 title: photo.value(forKey: "title") as? String ?? "",
+                                 thumbnailURL: photo.value(forKey: "thumbnail_url") as? String ?? "",
+                                 data: nil) // extract data binary from CoreData
+                }
+                self?.totalCount = self?.photos.count ?? 0
+                self?.delegate?.onFetchCompleted()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    fileprivate func fetchRemotePhotos() {
+        photosRepository.getPhotos(for: user, and: album) {[weak self] result in
+            switch result {
+            case .success(let photosDTO):
+                self?.photos = photosDTO.map { photo in
+                    return Photo(id: photo.id,
+                                 albumID: photo.albumID,
+                                 userID: (self?.user.id)!,
+                                 title: photo.title,
+                                 thumbnailURL: photo.thumbnailURL,
+                                 data: nil)
+                }
+                self?.totalCount = (self?.photos.count)!
+                // Save local copy in CoreData
+                self?.photosRepository.saveToPhotosWarehouse(photosDTO, user: self!.user)
+                self?.delegate?.onFetchCompleted()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    fileprivate func downloadRemoteFile(_ photo: Photo, for item: Int) {
+        guard let url = URL(string: photo.thumbnailURL)
+        else {
+            return
+        }
+        photosRepository.downloadRemoteFile(at: url) { result in
+            switch result {
+            case .success(let imageData):
+                // refresh image
+                self.photos[item].data = UIImage(data: imageData)
+                self.delegate?.refreshCell(at: item)
+                self.saveRemoteImageToPhotosWarehouse(imageData, photo: photo)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    fileprivate func saveRemoteImageToPhotosWarehouse(_ data: Data, photo: Photo) {
+        photosRepository.saveBinaryData(data, for: photo)
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import URITemplate
+//import URITemplate
 
 class API {
     private let apiConfig: APIConfig
@@ -37,11 +37,11 @@ extension API {
         // /users/{user_id}/albums
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
-        let template = URITemplate(template: Endpoints.albums.rawValue)
-        let path = template.expand(
-            ["user_id": user.id]
-        )
-        components.path = path
+//        let template = URITemplate(template: Endpoints.albums.rawValue)
+//        let path = template.expand(
+//            ["user_id": user.id]
+//        )
+        components.path = "/users/\(user.id)/albums"
         guard let url = components.url
         else {
             completion(Result.failure(HTTPNetworkError.invalidURL))
@@ -58,11 +58,11 @@ extension API {
         var components = URLComponents()
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
-        let template = URITemplate(template: Endpoints.photos.rawValue)
-        let path = template.expand(
-            ["user_id": user.id]
-        )
-        components.path = path
+//        let template = URITemplate(template: Endpoints.photos.rawValue)
+//        let path = template.expand(
+//            ["user_id": user.id]
+//        )
+        components.path = "/users/\(user.id)/photos"
         components.queryItems = [URLQueryItem]()
         components.queryItems?.append(
             URLQueryItem(name: "albumId", value: "\(album.id)")

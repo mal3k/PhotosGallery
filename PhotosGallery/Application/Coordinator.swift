@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
@@ -21,5 +23,11 @@ extension Coordinator {
     var api: API {
         let apiFetcher = APIFetcher()
         return API(apiConfig: apiConfig, apiFetcher: apiFetcher)
+    }
+    var managedContext: NSManagedObjectContext {
+        // swiftlint:disable force_cast
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // swiftlint:enable force_cast
+        return appDelegate.persistentContainer.viewContext
     }
 }

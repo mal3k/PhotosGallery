@@ -11,9 +11,11 @@ protocol ViewModelDelegate: class {
     func onFetchCompleted()
     func onFetchFailed(with error: String)
     func reloadSearchResults()
+    func refreshCell(at index: Int)
 }
 
 extension ViewModelDelegate {
-    func reloadSearchResults() {
-    }
+    // MARK: Optional methods
+    func reloadSearchResults() {}
+    func refreshCell(at index: Int) {}
 }

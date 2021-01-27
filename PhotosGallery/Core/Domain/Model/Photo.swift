@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct Photo {
+    // swiftlint:disable identifier_name
+    let id: Int
+    let albumID: Int
+    let userID: Int
     let title: String
-    let url: String
     let thumbnailURL: String
+    var data: UIImage?
 }

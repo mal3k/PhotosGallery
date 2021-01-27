@@ -32,7 +32,7 @@ class PhotosViewController: UIViewController {
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.photos.count
+        return viewModel.totalCount
     }
     // swiftlint:disable line_length
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,13 +40,19 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         // swiftlint:disable force_cast
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier,
                                                       for: indexPath) as! PhotoCollectionViewCell
-        let photo = viewModel.photos[indexPath.item]
+        let photo = viewModel.getPhoto(at: indexPath.row)
         cell.photoTitleLabel.text = photo.title
-        guard let url = URL(string: photo.thumbnailURL)
-        else {
-            return cell
+        if let image = photo.data {
+            cell.photoThumbnailImageView.image = image
+        } else {
+//            cell.photoThumbnailImageView.kf.setImage(with: URL(string: photo.thumbnailURL))
+            viewModel.downloadPhoto(at: indexPath.row)
         }
-        cell.photoThumbnailImageView.kf.setImage(with: url)
+//        guard let url = URL(string: photo.thumbnailURL)
+//        else {
+//            return cell
+//        }
+//        cell.photoThumbnailImageView.kf.setImage(with: url)
         return cell
     }
 }
@@ -64,5 +70,10 @@ extension PhotosViewController: ViewModelDelegate {
         }
     }
     func onFetchFailed(with error: String) {
+    }
+    func refreshCell(at index: Int) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+        }
     }
 }
