@@ -15,5 +15,5 @@ struct Photo {
     let userID: Int
     let title: String
     let thumbnailURL: String
-    var data: UIImage?
+    let data: UIImage?
 }

@@ -106,7 +106,12 @@ extension PhotosViewModel {
             switch result {
             case .success(let imageData):
                 // refresh image
-                self.photos[item].data = UIImage(data: imageData)
+                self.photos[item] = Photo(id: photo.id,
+                                          albumID: photo.albumID,
+                                          userID: photo.userID,
+                                          title: photo.title,
+                                          thumbnailURL: photo.thumbnailURL,
+                                          data: UIImage(data: imageData))
                 self.delegate?.refreshCell(at: item)
                 self.saveRemoteImageToPhotosWarehouse(imageData, photo: photo)
             case .failure(let error):
