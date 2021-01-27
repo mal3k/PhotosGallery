@@ -88,6 +88,7 @@ extension DefaultPhotosRepository: PhotosRepository {
                 photo.setValue(photoDTO.id, forKeyPath: "photo_id")
                 photo.setValue(photoDTO.title, forKeyPath: "title")
                 photo.setValue(photoDTO.thumbnailURL, forKeyPath: "thumbnail_url")
+                photo.setValue(Data(), forKey: "data")
                 do {
                     try managedContext.save()
                 } catch let error as NSError {
