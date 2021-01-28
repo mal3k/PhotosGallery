@@ -27,8 +27,17 @@
 		C42DA2EB25B8C06100752739 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA2EA25B8C06100752739 /* UsersViewModel.swift */; };
 		C42DA2F425B8D11800752739 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DA2F225B8D11800752739 /* UserTableViewCell.swift */; };
 		C42DA2F525B8D11800752739 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42DA2F325B8D11800752739 /* UserTableViewCell.xib */; };
+		C439D0CA25BE1BD90027FAAE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439D0C825BE1BD90027FAAE /* PhotoCollectionViewCell.swift */; };
+		C439D0CB25BE1BD90027FAAE /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C439D0C925BE1BD90027FAAE /* PhotoCollectionViewCell.xib */; };
 		C44695ED25BDAB690013580F /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44695EC25BDAB690013580F /* ViewModelDelegate.swift */; };
+		C446961C25BDFD7D0013580F /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446961B25BDFD7D0013580F /* PhotosViewModel.swift */; };
+		C446962125BDFDD70013580F /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446962025BDFDD70013580F /* PhotosRepository.swift */; };
+		C446962625BDFE690013580F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446962525BDFE690013580F /* Photo.swift */; };
+		C446962B25BDFE780013580F /* PhotoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446962A25BDFE780013580F /* PhotoDTO.swift */; };
+		C446963025BDFEBE0013580F /* DefaultPhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446962F25BDFEBE0013580F /* DefaultPhotosRepository.swift */; };
 		C46B712125BB2052001DFAAC /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B712025BB2052001DFAAC /* AlbumsViewModel.swift */; };
+		C46EB3B425C219C300F26D36 /* SwiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3B325C219C300F26D36 /* SwiftLog.swift */; };
+		C46EB3C825C23EE000F26D36 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3C725C23EE000F26D36 /* UIViewController+Extension.swift */; };
 		C46F828025BC66A100023B96 /* AlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F827F25BC66A100023B96 /* AlbumsRepository.swift */; };
 		C46F828A25BC6F2000023B96 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F828925BC6F2000023B96 /* Album.swift */; };
 		C46F828F25BC70CD00023B96 /* DefaultAlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F828E25BC70CD00023B96 /* DefaultAlbumsRepository.swift */; };
@@ -90,8 +99,17 @@
 		C42DA2EA25B8C06100752739 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		C42DA2F225B8D11800752739 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C42DA2F325B8D11800752739 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		C439D0C825BE1BD90027FAAE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C439D0C925BE1BD90027FAAE /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		C44695EC25BDAB690013580F /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
+		C446961B25BDFD7D0013580F /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		C446962025BDFDD70013580F /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
+		C446962525BDFE690013580F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C446962A25BDFE780013580F /* PhotoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDTO.swift; sourceTree = "<group>"; };
+		C446962F25BDFEBE0013580F /* DefaultPhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotosRepository.swift; sourceTree = "<group>"; };
 		C46B712025BB2052001DFAAC /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		C46EB3B325C219C300F26D36 /* SwiftLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLog.swift; sourceTree = "<group>"; };
+		C46EB3C725C23EE000F26D36 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C46F827F25BC66A100023B96 /* AlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepository.swift; sourceTree = "<group>"; };
 		C46F828925BC6F2000023B96 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		C46F828E25BC70CD00023B96 /* DefaultAlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlbumsRepository.swift; sourceTree = "<group>"; };
@@ -183,8 +201,10 @@
 		C42DA2C925B8AD9B00752739 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C45A88E325BEC3B200722B8D /* CoreData */,
 				C42DA2D525B8AE5000752739 /* UserDTO.swift */,
 				C46F829625BC853400023B96 /* AlbumDTO.swift */,
+				C446962A25BDFE780013580F /* PhotoDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 			children = (
 				C42DA2DE25B8B09300752739 /* User.swift */,
 				C46F828925BC6F2000023B96 /* Album.swift */,
+				C446962525BDFE690013580F /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +224,7 @@
 			children = (
 				C42DA2C425B8AD4000752739 /* UsersRepository.swift */,
 				C46F827F25BC66A100023B96 /* AlbumsRepository.swift */,
+				C446962025BDFDD70013580F /* PhotosRepository.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -212,6 +234,7 @@
 			children = (
 				C42DA2E525B8B84500752739 /* DefaultUsersRepository.swift */,
 				C46F828E25BC70CD00023B96 /* DefaultAlbumsRepository.swift */,
+				C446962F25BDFEBE0013580F /* DefaultPhotosRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -223,6 +246,33 @@
 				C42DA2F325B8D11800752739 /* UserTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C439D0C725BE1BB50027FAAE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C439D0C825BE1BD90027FAAE /* PhotoCollectionViewCell.swift */,
+				C439D0C925BE1BD90027FAAE /* PhotoCollectionViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C446961725BDF65C0013580F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C477E38725B81E2D004EB844 /* Data */,
+				C477E38525B81E1C004EB844 /* Domain */,
+				C477E38625B81E24004EB844 /* Presentation */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C45A88E325BEC3B200722B8D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C477E35125B81B37004EB844 /* PhotosGallery.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C46B712525BB2071001DFAAC /* Users */ = {
@@ -272,13 +322,10 @@
 			isa = PBXGroup;
 			children = (
 				C477E38425B81E14004EB844 /* Application */,
-				C477E38725B81E2D004EB844 /* Data */,
-				C477E38525B81E1C004EB844 /* Domain */,
-				C477E38625B81E24004EB844 /* Presentation */,
+				C446961725BDF65C0013580F /* Core */,
 				C477E35425B81B39004EB844 /* Assets.xcassets */,
 				C477E35625B81B39004EB844 /* LaunchScreen.storyboard */,
 				C477E35925B81B39004EB844 /* Info.plist */,
-				C477E35125B81B37004EB844 /* PhotosGallery.xcdatamodeld */,
 			);
 			path = PhotosGallery;
 			sourceTree = "<group>";
@@ -310,6 +357,7 @@
 				C42DA27325B85C3C00752739 /* Globals.swift */,
 				C42DA2A725B88C4E00752739 /* Coordinator.swift */,
 				C42DA2B125B88FDE00752739 /* AppCoordinator.swift */,
+				C46EB3B325C219C300F26D36 /* SwiftLog.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -327,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				C44695EC25BDAB690013580F /* ViewModelDelegate.swift */,
+				C46EB3C725C23EE000F26D36 /* UIViewController+Extension.swift */,
 				C46B712525BB2071001DFAAC /* Users */,
 				C46B712625BB2077001DFAAC /* Albums */,
 				C477E39F25B81EE1004EB844 /* Photos */,
@@ -347,8 +396,10 @@
 		C477E39F25B81EE1004EB844 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				C439D0C725BE1BB50027FAAE /* Components */,
 				C477E3AA25B81F19004EB844 /* PhotosViewController.swift */,
 				C42DA2BC25B89AD800752739 /* PhotosCoordinator.swift */,
+				C446961B25BDFD7D0013580F /* PhotosViewModel.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -463,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C477E35825B81B39004EB844 /* LaunchScreen.storyboard in Resources */,
+				C439D0CB25BE1BD90027FAAE /* PhotoCollectionViewCell.xib in Resources */,
 				C42DA2F525B8D11800752739 /* UserTableViewCell.xib in Resources */,
 				C477E35525B81B39004EB844 /* Assets.xcassets in Resources */,
 			);
@@ -615,17 +667,25 @@
 				C48988E325BAB9DA00DEF249 /* AlbumsCoordinator.swift in Sources */,
 				C42DA2E625B8B84500752739 /* DefaultUsersRepository.swift in Sources */,
 				C46B712125BB2052001DFAAC /* AlbumsViewModel.swift in Sources */,
+				C439D0CA25BE1BD90027FAAE /* PhotoCollectionViewCell.swift in Sources */,
 				C477E3A625B81F0F004EB844 /* AlbumsViewController.swift in Sources */,
 				C42DA2BD25B89AD800752739 /* PhotosCoordinator.swift in Sources */,
+				C46EB3C825C23EE000F26D36 /* UIViewController+Extension.swift in Sources */,
 				C477E3A125B81F01004EB844 /* UsersViewController.swift in Sources */,
 				C477E3AB25B81F19004EB844 /* PhotosViewController.swift in Sources */,
 				C42DA2B225B88FDE00752739 /* AppCoordinator.swift in Sources */,
 				C42DA26F25B85BAF00752739 /* APIConfig.swift in Sources */,
+				C446963025BDFEBE0013580F /* DefaultPhotosRepository.swift in Sources */,
+				C446961C25BDFD7D0013580F /* PhotosViewModel.swift in Sources */,
+				C446962B25BDFE780013580F /* PhotoDTO.swift in Sources */,
+				C46EB3B425C219C300F26D36 /* SwiftLog.swift in Sources */,
 				C42DA27425B85C3C00752739 /* Globals.swift in Sources */,
 				C42DA2DF25B8B09300752739 /* User.swift in Sources */,
+				C446962125BDFDD70013580F /* PhotosRepository.swift in Sources */,
 				C44695ED25BDAB690013580F /* ViewModelDelegate.swift in Sources */,
 				C46F828025BC66A100023B96 /* AlbumsRepository.swift in Sources */,
 				C42DA2A825B88C4E00752739 /* Coordinator.swift in Sources */,
+				C446962625BDFE690013580F /* Photo.swift in Sources */,
 				C42DA2EB25B8C06100752739 /* UsersViewModel.swift in Sources */,
 				C42DA2AD25B88EEB00752739 /* UsersCoordinator.swift in Sources */,
 				C42DA2C525B8AD4000752739 /* UsersRepository.swift in Sources */,
@@ -809,8 +869,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DT5G7UBKH4;
 				INFOPLIST_FILE = PhotosGallery/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -829,8 +890,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DT5G7UBKH4;
 				INFOPLIST_FILE = PhotosGallery/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

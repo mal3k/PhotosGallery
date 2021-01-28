@@ -5,9 +5,18 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "62733EC9-325F-4427-8389-C3B03FFEF879"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            uuid = "C19D8311-59A9-4E87-A0B7-596AB7A17D89"
+            uuid = "88D197D0-8F1F-4643-B9E1-98A9AE637AAF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -19,10 +28,358 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
          <BreakpointContent
-            uuid = "62733EC9-325F-4427-8389-C3B03FFEF879"
+            uuid = "3A60E0EB-A46E-42B9-8A30-95401A3AE633"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "2F425972-6889-42A6-8128-763B4D330FEC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A919E361-EA45-4BC0-97BC-A80688BD04E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89CEE7D0-A843-452F-B15B-6BE6AB4A3BD5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70A8411F-66EC-4C7B-A042-45E6F2943E64"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA30D3C2-C8F1-4B3C-8F73-42B6BB14BF1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B58C48B-DA76-4997-908E-679C9EBE4356"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FABFF30-C494-41EA-9DD0-B1861024EA28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Data/Network/APIFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5596D96-1AE6-4997-A348-736A990B2DAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5596D96-1AE6-4997-A348-736A990B2DAA - a077388c0de9feeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;__C.NSManagedObject&gt;, Swift.Error&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchPhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "E5596D96-1AE6-4997-A348-736A990B2DAA - a077388c0de9feeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;__C.NSManagedObject&gt;, Swift.Error&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchPhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "154">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C51AFB33-C513-4C7A-8C1B-A0BE243C93E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C51AFB33-C513-4C7A-8C1B-A0BE243C93E9 - f3e5bbdbbdad1b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotosGallery.PhotosViewModel.(fetchPhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "C51AFB33-C513-4C7A-8C1B-A0BE243C93E9 - a077388c0de9fea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;__C.NSManagedObject&gt;, Swift.Error&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchPhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30D5CCB2-ADDB-4DBC-A149-B7A6569D84C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24653759-7083-4E47-9207-E843E9B8E9AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68F11DFB-C5EE-48CE-ACC8-FE9BE1EB0851"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72B77517-25F8-4374-B5CD-03CAB76B1579"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "fetchRemotePhotos()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "72B77517-25F8-4374-B5CD-03CAB76B1579 - 4baacca65e8ce73f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.PhotoDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchRemotePhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  uuid = "72B77517-25F8-4374-B5CD-03CAB76B1579 - 4baacca65e8ce73f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.PhotoDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchRemotePhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84106B15-3D37-466E-849B-AC35A270EFC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "fetchRemotePhotos()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84106B15-3D37-466E-849B-AC35A270EFC6 - 1c4468f98826702c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotosGallery.PhotosViewModel.(fetchRemotePhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "84106B15-3D37-466E-849B-AC35A270EFC6 - 4baacca65e8ce77d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PhotosGallery.PhotoDTO&gt;, PhotosGallery.HTTPNetworkError&gt;) -&gt; () in PhotosGallery.PhotosViewModel.(fetchRemotePhotos in _AB365278F28DA5C7E058E8BF309895C1)() -&gt; ()"
+                  moduleName = "PhotosGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malektrabelsi/Projects/PhotosGallery-Sample/PhotosGallery/Core/Presentation/Photos/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
