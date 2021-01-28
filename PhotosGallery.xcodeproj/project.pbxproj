@@ -38,6 +38,8 @@
 		C46B712125BB2052001DFAAC /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B712025BB2052001DFAAC /* AlbumsViewModel.swift */; };
 		C46EB3B425C219C300F26D36 /* SwiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3B325C219C300F26D36 /* SwiftLog.swift */; };
 		C46EB3C825C23EE000F26D36 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3C725C23EE000F26D36 /* UIViewController+Extension.swift */; };
+		C46EB3EA25C24ED300F26D36 /* SearchUsersUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3E925C24ED300F26D36 /* SearchUsersUseCaseTests.swift */; };
+		C46EB3F025C2525B00F26D36 /* User+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB3EF25C2525B00F26D36 /* User+Stub.swift */; };
 		C46F828025BC66A100023B96 /* AlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F827F25BC66A100023B96 /* AlbumsRepository.swift */; };
 		C46F828A25BC6F2000023B96 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F828925BC6F2000023B96 /* Album.swift */; };
 		C46F828F25BC70CD00023B96 /* DefaultAlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F828E25BC70CD00023B96 /* DefaultAlbumsRepository.swift */; };
@@ -110,6 +112,8 @@
 		C46B712025BB2052001DFAAC /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		C46EB3B325C219C300F26D36 /* SwiftLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLog.swift; sourceTree = "<group>"; };
 		C46EB3C725C23EE000F26D36 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C46EB3E925C24ED300F26D36 /* SearchUsersUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersUseCaseTests.swift; sourceTree = "<group>"; };
+		C46EB3EF25C2525B00F26D36 /* User+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Stub.swift"; sourceTree = "<group>"; };
 		C46F827F25BC66A100023B96 /* AlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepository.swift; sourceTree = "<group>"; };
 		C46F828925BC6F2000023B96 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		C46F828E25BC70CD00023B96 /* DefaultAlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlbumsRepository.swift; sourceTree = "<group>"; };
@@ -219,14 +223,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C42DA2E325B8B81B00752739 /* Usecases */ = {
+		C42DA2E325B8B81B00752739 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				C42DA2C425B8AD4000752739 /* UsersRepository.swift */,
 				C46F827F25BC66A100023B96 /* AlbumsRepository.swift */,
 				C446962025BDFDD70013580F /* PhotosRepository.swift */,
 			);
-			path = Usecases;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		C42DA2E425B8B82900752739 /* Repositories */ = {
@@ -296,6 +300,30 @@
 			path = Albums;
 			sourceTree = "<group>";
 		};
+		C46EB3E425C24E7900F26D36 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C46EB3E525C24E8C00F26D36 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C46EB3E525C24E8C00F26D36 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C46EB3E925C24ED300F26D36 /* SearchUsersUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C46EB3EE25C2523F00F26D36 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C46EB3EF25C2525B00F26D36 /* User+Stub.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		C477E33C25B81B37004EB844 = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +361,8 @@
 		C477E36125B81B39004EB844 /* PhotosGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				C46EB3E425C24E7900F26D36 /* Domain */,
+				C46EB3EE25C2523F00F26D36 /* Mocks */,
 				C477E36225B81B39004EB844 /* PhotosGalleryTests.swift */,
 				C477E36425B81B39004EB844 /* Info.plist */,
 			);
@@ -365,7 +395,7 @@
 		C477E38525B81E1C004EB844 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C42DA2E325B8B81B00752739 /* Usecases */,
+				C42DA2E325B8B81B00752739 /* UseCases */,
 				C42DA2DA25B8AE5900752739 /* Model */,
 			);
 			path = Domain;
@@ -707,7 +737,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46EB3EA25C24ED300F26D36 /* SearchUsersUseCaseTests.swift in Sources */,
 				C477E36325B81B39004EB844 /* PhotosGalleryTests.swift in Sources */,
+				C46EB3F025C2525B00F26D36 /* User+Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
