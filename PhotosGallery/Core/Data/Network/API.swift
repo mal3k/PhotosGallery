@@ -36,10 +36,6 @@ extension API {
         // /users/{user_id}/albums
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
-//        let template = URITemplate(template: Endpoints.albums.rawValue)
-//        let path = template.expand(
-//            ["user_id": user.id]
-//        )
         components.path = "/users/\(user.id)/albums"
         guard let url = components.url
         else {
@@ -57,10 +53,6 @@ extension API {
         var components = URLComponents()
         components.scheme = apiConfig.scheme
         components.host = apiConfig.host
-//        let template = URITemplate(template: Endpoints.photos.rawValue)
-//        let path = template.expand(
-//            ["user_id": user.id]
-//        )
         components.path = "/users/\(user.id)/photos"
         components.queryItems = [URLQueryItem]()
         components.queryItems?.append(
