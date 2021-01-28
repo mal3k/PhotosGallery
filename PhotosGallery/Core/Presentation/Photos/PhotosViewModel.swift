@@ -73,6 +73,7 @@ extension PhotosViewModel {
                 self?.delegate?.onFetchCompleted()
             case .failure(let error):
                 self?.log(with: error.localizedDescription)
+                self?.delegate?.onFetchFailed(with: "An expected error occurred")
             }
         }
     }
@@ -94,6 +95,7 @@ extension PhotosViewModel {
                 self?.delegate?.onFetchCompleted()
             case .failure(let error):
                 self?.log(with: error.localizedDescription)
+                self?.delegate?.onFetchFailed(with: "Could not process request..Check internet connection")
             }
         }
     }

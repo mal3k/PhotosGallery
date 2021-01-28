@@ -48,14 +48,8 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         if let image = photo.data {
             cell.photoThumbnailImageView.image = image
         } else {
-//            cell.photoThumbnailImageView.kf.setImage(with: URL(string: photo.thumbnailURL))
             viewModel.downloadPhoto(at: indexPath.row)
         }
-//        guard let url = URL(string: photo.thumbnailURL)
-//        else {
-//            return cell
-//        }
-//        cell.photoThumbnailImageView.kf.setImage(with: url)
         return cell
     }
 }
@@ -73,6 +67,10 @@ extension PhotosViewController: ViewModelDelegate {
         }
     }
     func onFetchFailed(with error: String) {
+        DispatchQueue.main.async {
+            self.progressHUD.dismiss()
+            self.showAlert(with: error)
+        }
     }
     func refreshCell(at index: Int) {
         DispatchQueue.main.async {

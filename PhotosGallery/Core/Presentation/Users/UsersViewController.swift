@@ -93,6 +93,10 @@ extension UsersViewController: ViewModelDelegate {
         }
     }
     func onFetchFailed(with error: String) {
+        DispatchQueue.main.async {
+            self.progressHUD.dismiss()
+            self.showAlert(with: error)
+        }
     }
     func reloadSearchResults() {
         self.resultsController.tableView.reloadData()

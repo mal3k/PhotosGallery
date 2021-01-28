@@ -56,5 +56,9 @@ extension AlbumsViewController: ViewModelDelegate {
         }
     }
     func onFetchFailed(with error: String) {
+        DispatchQueue.main.async {
+            self.progressHUD.dismiss()
+            self.showAlert(with: error)
+        }
     }
 }

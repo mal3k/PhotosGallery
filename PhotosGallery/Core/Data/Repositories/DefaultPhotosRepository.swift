@@ -19,6 +19,13 @@ class DefaultPhotosRepository: Printable {
 }
 
 extension DefaultPhotosRepository: PhotosRepository {
+    /// A photo storage in Core Data is done in two steps:
+    ///  1- Download and save the photo details (title, url, etc).
+    ///  2- Download and save the photo data.
+    ///  This method do the second step
+    /// - Parameters:
+    ///   - url: The url for the photo
+    ///   - completion: A Result callback to handle the server response
     func downloadRemoteFile(at url: URL,
                             completion: @escaping(Result<Data, Error>) -> Void) {
         // download image from url and save it to core data
@@ -35,6 +42,13 @@ extension DefaultPhotosRepository: PhotosRepository {
             completion(Result.success(imageData))
         }.resume()
     }
+    /// After downloading a photo data, this method will save the photo binary to Core Data with the following steps:
+    ///  1- Fetch the already saved photo in Core Data
+    ///  2- Update the photo attribute with the download binary data
+    ///  3- Save the photo to Core Data
+    /// - Parameters:
+    ///   - data: The binary data of the photo
+    ///   - photo: This parameter is used to fetch the photo already saved in Core Data
     func saveBinaryData(_ data: Data, for photo: Photo) {
         autoreleasepool {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PhotoEntity")
@@ -48,19 +62,18 @@ extension DefaultPhotosRepository: PhotosRepository {
                     let photo = results.first
                     photo?.setValue(data, forKey: "data")
                 }
-                do {
-                    try managedContext.save()
-                    print("Photo saved successfully")
-                } catch let error {
-                    log(with: error.localizedDescription)
-                }
-                //            completion(Result.success(albums))
+                try managedContext.save()
+                log(with: "Photo saved successfully")
             } catch let error {
                 log(with: error.localizedDescription)
-                //            completion(Result.failure(error))
             }
         }
     }
+    /// Try to find photos of a specific user and album in Core Data
+    /// - Parameters:
+    ///   - user: User object attached to the photo
+    ///   - album: Album object attached to the photo
+    ///   - completion: A Result callback to handle the operation result
     func fetchPhotosWarehouse(for user: User,
                               and album: Album,
                               completion: @escaping (Result<[NSManagedObject], Error>) -> Void) {
@@ -75,6 +88,10 @@ extension DefaultPhotosRepository: PhotosRepository {
             log(with: error.localizedDescription)
         }
     }
+    /// After retrieve all album photos from the server, this method will save the photos collection to Core Data
+    /// - Parameters:
+    ///   - photos: All retrived photos
+    ///   - user: The user attached to the photos
     func saveToPhotosWarehouse(_ photos: PhotosResponse, user: User) {
         guard let entity = NSEntityDescription.entity(forEntityName: "PhotoEntity", in: managedContext)
         else {
@@ -97,6 +114,11 @@ extension DefaultPhotosRepository: PhotosRepository {
             }
         }
     }
+    /// Retrieve photos from server with a Get call
+    /// - Parameters:
+    ///   - user: The user object the photo belong to
+    ///   - album: The album object the belong to
+    ///   - completion: A Result callback to handle the server response
     func getPhotos(for user: User,
                    and album: Album,
                    completion: @escaping (Result<PhotosResponse, HTTPNetworkError>) -> Void) {

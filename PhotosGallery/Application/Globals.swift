@@ -8,6 +8,7 @@
 import Foundation
 
 struct Globals {
+    // MARK: NAMESPACE
     private init() {}
     static let SCHEME = "https"
     static let HOST = "jsonplaceholder.typicode.com"
